@@ -23,20 +23,31 @@ function lakukanLooping(arrPegawai) {
 
       Contoh: ["Aisyah Nirmala", "Mansur Faisal", ...]
   */
-  let hasilLooping = null;
+  let hasilLooping = [];
+  for(let i = 0; i<dataYangAkanDilooping.length; i++){
+    hasilLooping.push (dataYangAkanDilooping[i].namaDepan + " " +dataYangAkanDilooping[i].namaBelakang);
+  }
 
   /*
     TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
       yang berisi jumlah pria dari masing masing pegawai
   */
   let jumlahPria = null;
-
+  for(let i = 0; i<dataYangAkanDilooping.length; i++){
+    if(dataYangAkanDilooping[i].jenisKelamin == "M"){
+      jumlahPria ++;
+    }
+  }
   /*
     TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
       yang berisi jumlah wanita dari masing masing pegawai
   */
   let jumlahWanita = null;
-
+  for(let i = 0; i<dataYangAkanDilooping.length; i++){
+    if(dataYangAkanDilooping[i].jenisKelamin == "F"){
+      jumlahWanita ++;
+    }
+  }
   /*
     TODO 4: Buatlah sebuah variabel bernama "komentar"
       yang akan mengomentari apakah lebih banyak Pria atau Wanita
